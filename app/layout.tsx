@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Toaster } from 'react-hot-toast'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,6 +31,15 @@ export default function RootLayout({
           }}
         />
         {children}
+        
+        {/* Vapi Widget */}
+        <vapi-widget assistant-id="246acbba-b020-4088-8262-55b2189a965e" public-key="8118bbe9-dae4-40c5-b7af-30300a1539be"></vapi-widget>
+
+        <script
+          src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js"
+          async
+          type="text/javascript"
+        ></script>
       </body>
     </html>
   )

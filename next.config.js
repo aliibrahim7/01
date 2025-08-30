@@ -10,6 +10,20 @@ const nextConfig = {
     };
     return config;
   },
+  // Allow Vapi widget to work properly
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Content-Security-Policy',
+            value: "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://*.vapi.ai;",
+          },
+        ],
+      },
+    ];
+  },
 }
 
 module.exports = nextConfig

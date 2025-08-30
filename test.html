@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vapi Widget Test</title>
+    <script src="https://unpkg.com/@vapi-ai/client-sdk-react/dist/embed/widget.umd.js" async type="text/javascript"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vapi Widget Test Page</h1>
+        <p>This is a test page to verify that the Vapi widget is working correctly. You should see a "Create CV" button in the bottom-right corner of the screen.</p>
+        <p>If you don't see the widget, please check:</p>
+        <ul>
+            <li>Your internet connection</li>
+            <li>Browser console for any errors</li>
+            <li>That the Vapi script is loading properly</li>
+        </ul>
+    </div>
+
+    <!-- Vapi Widget -->
+    <vapi-widget
+      public-key="8118bbe9-dae4-40c5-b7af-30300a1539be"
+      assistant-id="55389fd7-ee50-4c73-9cee-7bd063c11979"
+      mode="voice"
+      theme="dark"
+      base-bg-color="#000000"
+      accent-color="#14B8A6"
+      cta-button-color="#000000"
+      cta-button-text-color="#ffffff"
+      border-radius="large"
+      size="full"
+      position="bottom-right"
+      title="Create CV"
+      start-button-text="Start"
+      end-button-text="Get CV"
+      cta-title="Create CV"
+      chat-first-message="Hey, How can I help you today?"
+      chat-placeholder="Type your message..."
+      voice-show-transcript="true"
+      consent-required="false"
+    ></vapi-widget>
+</body>
+</html>
